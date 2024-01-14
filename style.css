@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+* {
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    background-color: rgb(27, 29, 32);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: white;
+}
+
+.date {
+    margin-bottom: 25px;
+    position: relative;
+    top: 50px;
+}
+
+.money {
+    position: relative;
+    top: 50px;
+}
+
+.calculate {
+    position: relative;
+    top: 70px;
+}
+
+.results {
+    position: relative;
+    top: 70px;
+    opacity: 0;
+    transition: 0.75s;
+}
+
+.top {
+    width: 450px;
+    height: 550px;
+    background-color: black;
+    border-radius: 7.5px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.65);
+    text-align: center;
+    padding-bottom: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.history {
+    position: absolute;
+    width: 150px;
+    height: 200px;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.6);
+    border-radius: 7.5px;
+    right: 100px;
+    overflow: auto;
+    padding: 20px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.history > h1 {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.clearHistory {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.FI-container {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    text-align: left;
+}
+
+.FI {
+    color: rgb(180, 180, 180);
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.double {
+    background-color: red;
+    border-style: solid;
+}
+
+button {
+    transition: 0.5s;
+}
+
+button:hover {
+    filter: brightness(75%);
+}
+
+button:not(:hover) {
+    transition: 0.5s;
+}
+
+.results > h1 {
+    font-size: 20pt;
+}

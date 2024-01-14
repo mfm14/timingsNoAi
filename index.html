@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Income, For Money Farms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="top">
+            <br>
+            <div class="label">
+                <input type="text" label placeholder="Label/Name">
+            </div>
+            <div class="date">
+                <div class="firstDate">
+                    <input type="date" date class="FirstDay" placeholder="dd/mm/yyyy">
+                    <input type="text" time class="FirstTime" placeholder="E.G: 11:00:00 AM">
+                </div>
+                <div class="secondDate">
+                    <br>
+                    <button class="copyDate">Copy Date</button><br><br>
+                    <input type="date" date class="SecondDay" placeholder="dd/mm/yyyy">
+                    <input type="text" time class="SecondTime" placeholder="E.G: 11:00:00 PM">
+                </div>
+            </div>
+            <div class="money">
+                <input type="text" placeholder="First Money" class="first">
+                <input type="text" placeholder="Last Money" class="second"><br><br>
+                <button class="double">Had 2x?</button>
+            </div>
+            <button class="calculate">Calculate!</button>
+            <div class="results">
+                <h1 class="perMin"></h1>
+                <h1 class="perHour"></h1>
+                <h1 class="perDay"></h1>
+                <h1 class="fixed"></h1>
+                <h1 class="hours"></h1>
+            </div>
+        </div>
+        <div class="past-results"></div>
+    </div>
+    <div class="history"></div>
+    <div class="FI-container">
+        <h2>Insert files to fill out the time/dates faster!</h2>
+        <h2>Insert First File:</h2><input type="file" class="firstFI FI"><br> <!-- FI meaning file input -->
+        <h2>Insert Second File:</h2><input type="file" class="secondFI FI"/>
+    </div>
+    <button class="clearHistory">Clear History</button>
+    <script src="script.js"></script>
+</body>
+</html>
