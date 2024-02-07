@@ -65,7 +65,7 @@ clearHistory.addEventListener("click", clearLocalStorage);
 let savedHistory = JSON.parse(localStorage.getItem("historyV3")) || [];
 updateHistory(savedHistory);
 
-// Function to calculate
+// Function to calculate (Mind Blown!)
 function calculate() {
     const moneys = [parseValue(firstMoney), parseValue(secondMoney)];
     const times = [
@@ -170,15 +170,15 @@ copyDate.addEventListener("click", () => {
 // Function to insert files
 fis.forEach((el, i) => el.addEventListener("change", () => {
     const fileName = el.files[0].name;
-    if (fileName) {
-        let date = fileName.slice(11, 21);
-        let time = formatTimeString(fileName.slice(22, 28));
-        [dateInputs[i].value, timeInputs[i].value] = [date, time];
+    if (fileName && fileName.toLowerCase().includes("robloxscreenshot")) {
+        let date = fileName.slice(16); date = date.slice(0, 4) + "-" + date.slice(4, 6) + "-" + date.slice(6);
+        let time = date.slice(11); time = time.slice(0, 2) + ":" + time.slice(2, 4) + ":" + time.slice(4, 6);
+        dateInputs[i].value = date.slice(0, 10);
+        timeInputs[i].value = time;
     } else {
-        alert("Please insert valid files."); el.value = null; return false;
+        dateInputs[0].value = dateInputs[1].value;
     }
-    /*OCRMagic(el, i);*/
-}));
+}))
 
 // ITS MAGIC!
 /*
